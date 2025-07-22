@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediScan AI - Brain Tumor Detection</title>
+    <!-- Google Fonts: Poppins and Inter -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Three.js CDN -->
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.153.0/build/three.min.js"></script>
+  </head>
+  <body>
+    <div class="bg-animation"></div>
+
+    <!-- Particle System -->
+    <div class="particles" id="particles"></div>
+
+    <header>
+      <div class="header-content">
+        <div class="logo">🧠 MediScan AI</div>
+        <div class="status-indicator">
+          <div class="status-dot"></div>
+          <span>AI System Online</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <section class="hero">
+          <div class="hero-visuals">
+            <div id="brain-3d-container"></div>
+            <div class="hero-brain-circle">
+              <img
+                src="images/transparent-brain-mind-human-brain-brain-hemisphere-three-dime-colorful-3d-brain-showing-separate-1710896030388-removebg-preview.png"
+                alt="3D Brain"
+                class="hero-brain-img"
+              />
+            </div>
+            <div class="scanner-line"></div>
+          </div>
+          <div class="logo">AI Brain Tumor Detection</div>
+          <p>
+            Advanced medical image analysis powered by artificial intelligence
+          </p>
+        </section>
+
+        <!-- Upload Section -->
+        <section class="upload-section">
+          <div class="step-indicators">
+            <span class="step active">1. Upload Image</span>
+            <span class="step-separator">→</span>
+            <span class="step">2. Review</span>
+            <span class="step-separator">→</span>
+            <span class="step">3. Analyze</span>
+          </div>
+
+          <div class="upload-area" id="uploadArea">
+            <div class="upload-icon">🖼</div>
+            <div class="upload-text">Upload Brain Scan Image</div>
+            <div class="upload-subtext">
+              Drop your MRI or CT scan here, or click to browse
+            </div>
+            <button class="upload-btn" id="uploadBtn">📁 Select Image</button>
+            <input
+              type="file"
+              id="fileInput"
+              class="file-input"
+              accept="image/*"
+            />
+          </div>
+
+          <div class="image-preview" id="imagePreview">
+            <div class="preview-container">
+              <img id="previewImage" class="preview-image" alt="Preview" />
+              <button class="remove-image" id="removeBtn">×</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Analysis Section -->
+        <section class="analysis-section" id="analysisSection">
+          <button class="analyze-btn" id="analyzeBtn">
+            🔍 Analyze Image for Brain Tumor
+          </button>
+
+          <div
+            class="ai-analysis-visuals"
+            id="aiAnalysisVisuals"
+            style="display: none"
+          >
+            <div class="ai-icon-ring">
+              <div class="ai-icon">🤖</div>
+              <div class="rotating-ring"></div>
+            </div>
+            <div class="ai-heatmap"></div>
+            <div class="confidence-gauge" id="confidenceGauge"></div>
+          </div>
+
+          <div class="loading" id="loading">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">Analyzing Brain Scan...</div>
+            <div class="loading-subtext">
+              AI is examining the image for potential abnormalities
+            </div>
+          </div>
+
+          <div class="results" id="results"></div>
+        </section>
+
+        <!-- Disclaimer -->
+        <div class="disclaimer">
+          <div class="disclaimer-title">⚠ Medical Disclaimer</div>
+          <div class="disclaimer-text">
+            This AI tool is for educational and research purposes only. It
+            should NOT be used for actual medical diagnosis. Always consult with
+            qualified healthcare professionals for medical advice and proper
+            diagnosis.
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="notification" id="notification"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
