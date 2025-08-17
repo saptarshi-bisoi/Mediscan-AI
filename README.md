@@ -10,7 +10,16 @@ MediScan AI is a web-based application that allows users to upload MRI brain sca
 - **HTML5, CSS3, JavaScript** – Frontend  
 - **Flask (Python)** – Backend (planned)  
 - **TensorFlow / Keras** – AI Model (planned)  
+---
 
+## ⚡ API Integration
+
+This project uses **Google Gemini API** for AI-powered analysis of brain scan images.  
+
+### 🔑 Setup Instructions
+
+1. Get your **Google Gemini API Key** from [Google AI Studio](https://aistudio.google.com/).
+2. Create a `.env` file in the project root and add your key
 ---
 
 ## 🌟 Features
